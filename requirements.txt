@@ -1,0 +1,14 @@
+asgiref==3.7.2
+#backports.zoneinfo==0.2.1
+dj-static==0.0.6
+Django==4.2.2
+django-cors-headers==3.13.0
+django-widget-tweaks==1.4.12
+Pillow==9.4.0
+#psycopg2==2.9.5
+psycopg2-binary==2.9.6 
+pytz==2022.7.1
+sqlparse==0.4.4
+static3==0.7.0
+tzdata==2023.3
+Unipath==1.1
