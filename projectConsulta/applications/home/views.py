@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from django.views.generic import TemplateView, ListView, DetailView
 # Create your views here.
-
+from .models import Municipio
 
 
 class Inicio(TemplateView):
@@ -11,3 +11,12 @@ class Inicio(TemplateView):
 class Inicio2(TemplateView):
     template_name = "home/home.html"
 
+class MunicipiosConsListView(ListView):
+    model = Municipio
+    context_object_name= 'municipios'
+    template_name = "home/home.html"
+
+
+class PresidenteDetailView(DetailView):
+    model = Municipio
+    template_name = "home/inicio.html"

@@ -42,7 +42,19 @@
                   </tr>
                   </thead>
                   <tbody>
-                    
+                    {% for mun  in municipios %}
+            
+                    <tr>
+                    <td>{{ mun.id }}</td>
+                    <td>{{ mun.municipio }}</td>
+                    <td>{{ mun.seccion }}</td>
+                    <td>{{ mun.casilla }}</td>
+                    <td>{{ mun.ln21 }}</td>
+                    <td>
+                        <button type="button" class="btn btn-block btn-success btn-xs">Success</button>
+                    </td>
+                    </tr>
+                    {% endfor %}
                   </tbody>
                   <tfoot>
                     <tr>
