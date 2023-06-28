@@ -6,6 +6,17 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
+          {{ municipios }}
+
+          {% for h in municipios %}
+          <tr>
+            <td>{{ h.cabecera }}</td>
+            <td>{{ h.partido }}</td>
+            <td>{{ h.siglas }}</td>
+            <td>{{ h.nombre }}</td>
+          </tr>
+          {% endfor %}
+          
           <div class="col-sm-6">
             <h1>Municipios</h1>
           </div>
