@@ -52,6 +52,7 @@
                     <td>{{ mun.ln21 }}</td>
                     <td>
                         <button type="button" class="btn btn-block btn-success btn-xs">Success</button>
+                        <a class="btn btn-block btn-success btn-xs" href="{% url 'inicio:presidente' mun.id %}">Consulta</a>
                     </td>
                     </tr>
                     {% endfor %}
