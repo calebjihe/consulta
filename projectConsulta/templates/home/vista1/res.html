@@ -1,3 +1,4 @@
+
 {% load static %}
 
   <!-- Content Wrapper. Contains page content -->
@@ -5,8 +6,19 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">         
-          <div class="col-sm-6">            
+        <div class="row mb-2">
+          {{ municipios }}
+
+          {% for h in municipios %}
+          <tr>
+            <td>{{ h.cabecera }}</td>
+            <td>{{ h.partido }}</td>
+            <td>{{ h.siglas }}</td>
+            <td>{{ h.nombre }}</td>
+          </tr>
+          {% endfor %}
+          
+          <div class="col-sm-6">
             <h1>Municipios</h1>
           </div>
           <div class="col-sm-6">
@@ -51,11 +63,9 @@
                     <td>{{ mun.casilla }}</td>
                     <td>{{ mun.ln21 }}</td>
                     <td>
-                        <a id="idmun" name="idmun" class="btn btn-block btn-success btn-xs" href="{% url 'app1:detalle-mun' mun.id %}">Consulta</a>
-                    
-                    
-                    
-                      </td>
+                        <button type="button" class="btn btn-block btn-success btn-xs">Success</button>
+                        <a class="btn btn-block btn-success btn-xs" href="{% url 'inicio:presidente' mun.id %}">Consulta</a>
+                    </td>
                     </tr>
                     {% endfor %}
                   </tbody>

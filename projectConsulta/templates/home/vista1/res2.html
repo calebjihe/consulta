@@ -6,7 +6,16 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">         
-          <div class="col-sm-6">            
+          <div class="col-sm-6">
+            {{ municipios }}
+
+            {% for m in municipios %}
+            {{ m.cabecera }}
+            {{ m.partido }}
+            {% endfor %}
+            
+    
+            
             <h1>Municipios</h1>
           </div>
           <div class="col-sm-6">
@@ -51,7 +60,7 @@
                     <td>{{ mun.casilla }}</td>
                     <td>{{ mun.ln21 }}</td>
                     <td>
-                        <a id="idmun" name="idmun" class="btn btn-block btn-success btn-xs" href="{% url 'app1:detalle-mun' mun.id %}">Consulta</a>
+                        <a id="idmun" name="idmun" class="btn btn-block btn-success btn-xs" href="{% url 'app1:detalle' mun.id %}">Consulta</a>
                     
                     
                     
